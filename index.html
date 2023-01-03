@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <header>
+                <img src="images/logo.svg" alt="">
+            </header>
+
+            <main>
+                <div class="container-form">
+                    <form action="">
+                        <div class="formHeader">
+                            <div class="formHeader-Img">
+                                <img src="images/log-in.svg" alt="">
+                                <h1>Faça seu login</h1>
+                            </div>
+                            <p>Entre com suas informações de cadastro.</p>
+                        </div>
+
+                        <div class="formMain">
+                            <section>
+                                <label for="email">E-mail</label>
+                                    <div class="containerInput">
+                                        <img src="images/mail-focus.svg" class="imgInput" alt="">
+                                        <input type="email" value="" id="email" placeholder="Digite seu email" autofocus required>
+                                    </div>
+                            </section>
+
+                            <section>
+                                <label for="password">Senha</label>
+                                <div class="containerInput">
+                                    <img src="images/lock.svg" class="imgInput" alt="">
+                                    <input type="password" id="password" placeholder="Digite sua senha" required minlength="8">
+                                    <img src="images/eye.svg" class="eyeImg" id="eye-on" alt="">
+                                    <img src="images/eye-off.svg" class="eyeImg eyeDisable" id="eye-off" alt="">
+                                </div>
+                            </section>
+                        </div>
+
+                            <div class="formFooter">
+                                <div class="container-check">
+                                    <input id="inputCheck" type="checkbox" name="lembre-me">
+                                    <label id="labelCheck" for="inputCheck" >Lembre-me</label>
+                                </div>
+                                <span class="sameColor">Esqueci minha senha</span>
+                            </div>
+                            
+                            <div class="formSubmit">
+                                <button type="submit" class="buttonSubmit">ENTRAR</button>
+                                <span class="spanRegister">Não tem uma conta? <span class="sameColor">Registre-se</span></span>
+                            </div>
+                    </form>
+                </div>
+            </main>
+
+            
+        </div>
+
+        <div class="container-modal">
+            <div class="modal">
+                <div class="close">X</div>
+                <p class="result"></p>
+            </div>
+        </div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>

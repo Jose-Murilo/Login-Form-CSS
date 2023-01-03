@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+
+    font-size: 62.5%;
+
+    overflow-x: hidden;
+}
+
+body {
+    font-size: 2.0rem;
+}
+
+.container {
+    display: flex;
+}
+
+.left {
+    width: 50%;
+    max-height: 100vh;
+    background: var(--background);
+}
+
+header {
+    padding: 4.0rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Formulario */
+
+.container-form {
+    max-width: 56.2rem;
+    height: 50.2rem;
+    padding: 5.5rem 11.9rem;
+    border-radius: .4rem;
+
+    background: var(--form-background);
+}
+
+.formHeader-Img {
+    display: flex;
+    gap: 1.0rem;
+}
+
+.formHeader-Img h1 {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 2.1rem;
+    color: var(--text-title);
+    position: relative;
+}
+
+.formHeader p {
+    font-family: 'Roboto';
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: .5rem;
+    margin-bottom: 2.7rem;
+    color: var(--text-base);
+}
+
+.formMain {
+    display: flex;
+    flex-direction: column;
+    gap: 2.3rem;
+}
+
+label {
+    color: var(--text-base);
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+/* >>>>>> Inputs <<<<<< */
+
+.formMain-Img{
+    position: relative;
+}
+
+.containerInput {
+    display: flex;
+    position: relative;
+}
+
+.formMain #email,
+.formMain #password {
+    width: 100%;
+    width: 33.5rem;
+    height: 4.4rem;
+    background: transparent;
+    padding-left: 3.4rem;
+    
+    border: .1rem solid #868686;
+    border-radius: .4rem;
+    
+    color: white;
+    font-size: 1.7rem;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #333 inset;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: white !important;
+}
+
+.formMain #email:focus {
+    outline: .2rem solid var(--primary-color);
+}
+
+.formMain #password:focus {
+    outline: .2rem solid var(--primary-color);
+}
+
+.formMain #email::placeholder {
+    color: var(--text-base);
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+.formMain #password::placeholder {
+    color: var(--text-base);
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.imgInput {
+    position: absolute;
+    top: 1.2rem;
+    left: 1.0rem;
+}
+
+.eyeImg {
+    position: absolute;
+    right: 1.1rem;
+    top: 1.3rem;
+    cursor: pointer;
+    filter: invert(81%) sepia(10%) saturate(291%) hue-rotate(179deg) brightness(89%) contrast(89%);
+    width: 2.0rem;
+}
+
+.eyeDisable {
+    display: none;
+}
+
+.formFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.0rem 0;
+}
+
+/* Input checkbox */
+
+.boxChecked {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+}
+
+#inputCheck{
+    display: none;
+}
+
+#labelCheck {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+#inputCheck + #labelCheck {
+    position: relative;
+    padding-left: 3.0rem;
+}
+
+#inputCheck + #labelCheck::before {
+    content: "";
+    height: 2.0rem;
+    width: 2.0rem;
+
+    border: .1rem solid #868686;
+    background-color: transparent;
+    border-radius: .5rem;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+#inputCheck:checked + #labelCheck:before {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+#inputCheck:checked + #labelCheck::after {
+    content: "";
+    width: .5rem;
+    height: 1.0rem;
+    
+    border-right: .3rem solid white;
+    border-bottom: .3rem solid white;
+    transform: rotate(45deg);
+
+    position: absolute;
+    left: .7rem;
+    bottom: .7rem;
+}
+
+/* Span */
+
+.sameColor {
+    color: var(--primary-color);
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+/* formSubmit */
+
+.formSubmit .spanRegister {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.4rem;
+}
+
+.buttonSubmit {
+    width: 100%;
+    padding: 1.2rem 2.4rem;
+    background: var(--primary-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 18px;
+    color: #473404;
+    border: none;
+    border-radius: .4rem;
+}
+
+.buttonSubmit:hover {
+    background: #ffc532da;
+}
+
+/* >>>>>> Ultimo Span <<<<<< */
+
+.spanRegister {
+    text-align: center;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    
+    color: var(--primary-color);
+}
+
+
+/* >>>>>> Modal <<<<<< */
+
+.container-modal {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal {
+    width: 35.0rem;
+    height: 18.0rem;
+    background: var(--primary-color);
+    border-radius: 1.0rem;
+    border: .7rem solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    color: white;
+    right: .5rem;
+    top: .5rem;
+    cursor: pointer;
+}
+
+.close:hover {
+    scale: 1.1;
+}
+
+.modal p {
+    font-size: 4.5rem;
+    color: var(--form-background);
+    font-family: 'Poppins';
+}
+
+
+/* >>>>>> Lado direito (right) <<<<<< */
+
+
+.right {
+    width: 50%;
+    height: 100vh;
+    background-image: url(images/side-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* animation: right-left 600ms; */
+}
+
+/* >>>>>> KeyFrames <<<<<< */
+
+@keyframes right-left {
+    0% {
+        transform: translate(100%);
+    }
+    
+    100% {
+        transform: translate(-0%);
+    }
+}
+
+
+/* >>>>>> Responsividade <<<<<< */
+
+@media (max-width: 768px) {
+    .right {
+        display: none;
+    }
+
+    .left {
+        width: 100%;
+        height: 100vh;
+    }
+    .container-form {
+        background: none;
+        width: 100%;
+        padding: 0 1.2rem;
+    }
+
+    .formMain #email, 
+    .formMain #password {
+        width: 100%;
+    }
+}
