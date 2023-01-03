@@ -58,16 +58,5 @@ buttonSubmit.addEventListener('click', (event) => {
             inputEmail.value = ''
             inputPassword.value = ''
         })
-    // } else {
-    //     containerModal.style.display = 'flex'
-    //     modal.style.backgroundColor = '#333'
-    //     result.innerHTML = 'Verifique se seus dados estão corretos!'
-    //     result.style.fontSize = '2.4rem'
-    //     result.style.textAlign = 'center'
-    //     result.style.color = 'white'
-        
-    //     close.addEventListener('click', () => {
-    //         containerModal.style.display = 'none'
-    //     })
-    // }
+    }
 })
