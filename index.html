@@ -32,7 +32,7 @@
                                 <label for="email">E-mail</label>
                                     <div class="containerInput">
                                         <img src="images/mail-focus.svg" class="imgInput" alt="">
-                                        <input type="email" value="" id="email" placeholder="Digite seu email" autofocus required>
+                                        <input type="email" id="email" placeholder="Digite seu email" autofocus required/>
                                     </div>
                             </section>
 
@@ -40,7 +40,7 @@
                                 <label for="password">Senha</label>
                                 <div class="containerInput">
                                     <img src="images/lock.svg" class="imgInput" alt="">
-                                    <input type="password" id="password" placeholder="Digite sua senha" required minlength="8">
+                                    <input type="password" id="password" placeholder="Digite sua senha" required minlength="8" title="This field should not be left blank."/>
                                     <img src="images/eye.svg" class="eyeImg" id="eye-on" alt="">
                                     <img src="images/eye-off.svg" class="eyeImg eyeDisable" id="eye-off" alt="">
                                 </div>
@@ -49,7 +49,7 @@
 
                             <div class="formFooter">
                                 <div class="container-check">
-                                    <input id="inputCheck" type="checkbox" name="lembre-me">
+                                    <input id="inputCheck" type="checkbox" name="lembre-me"/>
                                     <label id="labelCheck" for="inputCheck" >Lembre-me</label>
                                 </div>
                                 <span class="sameColor">Esqueci minha senha</span>
@@ -62,8 +62,6 @@
                     </form>
                 </div>
             </main>
-
-            
         </div>
 
         <div class="container-modal">
@@ -73,6 +71,7 @@
             </div>
         </div>
         <div class="right"></div>
+
     </div>
 </body>
 </html>

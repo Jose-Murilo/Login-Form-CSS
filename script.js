@@ -35,30 +35,30 @@ eyeOff.addEventListener('click', () => {
 })
 
 buttonSubmit.addEventListener('click', (event) => {
-    event.preventDefault();
     let arrayEmail = Array.from(inputEmail.value).join('')
     let arrayPassword = Array.from(inputPassword.value)
-
+    
     const containerModal = document.querySelector('.container-modal')
     const close = document.querySelector('.close')
     const result = document.querySelector('.result')
     const modal = document.querySelector('.modal')
-
-    console.log(arrayPassword);
-
-    if (arrayEmail.includes('@gmail.com') && arrayPassword.length >= 8) {
-
+    
+    // console.log(arrayPassword);
+    
+    if (arrayEmail.includes('.com') && arrayPassword.length >= 8) {
+        
         containerModal.style.display = 'flex'
         modal.style.backgroundColor = 'var(--primary-color)'
         result.style.fontSize = '4.5rem'
         result.innerHTML = 'Logado!'
+        event.preventDefault();
         
         close.addEventListener('click', () => {
             containerModal.style.display = 'none'
             inputEmail.value = ''
             inputPassword.value = ''
         })
-    } else {
-        alert('Não deu')
+    } else if (!arrayEmail.includes('.com')) {
+        alert('Verifique se seus dados estão corretos')
     }
 })

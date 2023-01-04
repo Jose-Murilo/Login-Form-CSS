@@ -79,6 +79,10 @@ main {
     gap: 2.3rem;
 }
 
+section {
+    position: relative;
+}
+
 label {
     color: var(--text-base);
     font-family: 'Poppins';
@@ -319,9 +323,7 @@ input:-webkit-autofill {
     font-family: 'Poppins';
 }
 
-
 /* >>>>>> Lado direito (right) <<<<<< */
-
 
 .right {
     width: 50%;
