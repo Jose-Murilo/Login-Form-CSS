@@ -58,5 +58,7 @@ buttonSubmit.addEventListener('click', (event) => {
             inputEmail.value = ''
             inputPassword.value = ''
         })
+    } else {
+        alert('Não deu')
     }
 })
